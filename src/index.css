@@ -71,6 +71,10 @@ body {
     @apply uppercase tracking-wide font-title font-black text-2xl sm:right-10 sm:text-3xl md:text-4xl lg:text-[5rem];
   }
 
+    .about-image {
+      @apply absolute left-1/2 top-0 z-20 h-[60vh] w-96 origin-center -translate-x-1/2 overflow-hidden rounded-3xl md:w-[30vw];
+    }
+
 
 }
 .indicator-line {

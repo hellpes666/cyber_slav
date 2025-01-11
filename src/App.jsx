@@ -1,10 +1,11 @@
-import { Header, Hero } from "./components";
+import { Header, Hero, Story } from "./components";
 export default function App() {
     return (
         <div>
             <Header />
             <Hero />
-            <div className="h-[10000px]"></div>
+            <Story />
+            {/* <div className="h-[10000px]"></div> */}
         </div>
     );
 }

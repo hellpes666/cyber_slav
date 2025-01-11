@@ -17,7 +17,7 @@ const Hero = () => {
         gsap.from(animateElement, {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
             borderRadius: "0% 0% 0% 0%",
-            ease: "power1.inOut",
+            ease: "power2.inOut",
             scrollTrigger: {
                 trigger: animateElement,
                 start: "center center",
@@ -28,7 +28,7 @@ const Hero = () => {
     });
 
     return (
-        <div className="relative h-dvh w-screen overflow-x-hidden" id="hero">
+        <section className="relative h-dvh w-screen overflow-hidden" id="hero">
             {/* loading */}
 
             {/* content */}
@@ -44,11 +44,11 @@ const Hero = () => {
                 />
 
                 <h1 className="font-title hero-heading absolute bottom-5 right-5 z-40 text-white-100">
-                    начнем
+                    начнём
                 </h1>
             </div>
             <h1 className="font-title hero-heading absolute bottom-5 right-5 text-red-100">
-                начнем
+                начнём
             </h1>
 
             <div className="absolute left-0 top-12 z-40 size-full">
@@ -69,7 +69,7 @@ const Hero = () => {
                     />
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
