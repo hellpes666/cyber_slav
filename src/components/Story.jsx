@@ -23,6 +23,16 @@ const Story = () => {
     }, []);
 
     useGSAP(() => {
+        gsap.to("#clip", {
+            opacity: 1,
+            scrollTrigger: {
+                start: "center center",
+                end: "+=1000 center",
+                scrub: 0.5,
+                pin: true,
+                pinSpacing: true,
+            },
+        });
         const clipAnimation = gsap.timeline({
             scrollTrigger: {
                 trigger: "#clip",
@@ -65,7 +75,7 @@ const Story = () => {
                     </p>
                 </div>
             </div>
-            <div className="h-dvh w-screen" id="clip">
+            <div className="h-dvh w-screen opacity-0" id="clip">
                 <div className="mask-clip-path about-image">
                     <img
                         src="/img/meet.png"
