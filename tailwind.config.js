@@ -14,6 +14,16 @@ export default {
         'default-medium': ['default-medium', 'sans-serif'],
         'default-bold-italic': ['default-bold-italic', 'sans-serif'],
       },
+
+      colors: {
+        red: {
+          100: "#ff3c22",
+          200: ""
+        },
+        white: {
+          100: "#fafafa"
+        }
+      }
     },
   },
   plugins: [],

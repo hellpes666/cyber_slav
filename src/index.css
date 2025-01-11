@@ -59,4 +59,8 @@ body {
   .mask-clip-path {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
+
+     .hero-heading {
+       @apply uppercase tracking-wide font-title font-black text-2xl sm:right-10 sm:text-3xl md:text-4xl lg:text-[5rem];
+     }
 }
