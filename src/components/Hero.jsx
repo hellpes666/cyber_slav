@@ -3,12 +3,12 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { Button } from "../components";
 import { TiLocationArrow } from "react-icons/ti";
+import { useEffect, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
     const animateElement = "#img-frame";
-
     useGSAP(() => {
         gsap.set(animateElement, {
             clipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
@@ -29,17 +29,21 @@ const Hero = () => {
 
     return (
         <section className="relative h-dvh w-screen overflow-hidden" id="hero">
-            {/* loading */}
+            {/* Make maybe check loading data */}
+            {/* {imageLoaded && (
+                <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-[#0f0f0f]">
+                    <img src="/img/logo-bg-tablet.png" alt="" className="" />
+                </div>
+            )} */}
 
             {/* content */}
-
             <div
                 className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg mask-clip-path"
                 id="img-frame"
             >
                 <img
                     src="/img/hero.jpg"
-                    alt=""
+                    alt="hero-img"
                     className="object-fit object-cover size-full"
                 />
 
