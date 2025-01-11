@@ -28,7 +28,7 @@ const Hero = () => {
     });
 
     return (
-        <div className="relative h-dvh w-screen overflow-x-hidden">
+        <div className="relative h-dvh w-screen overflow-x-hidden" id="hero">
             {/* loading */}
 
             {/* content */}
@@ -51,7 +51,7 @@ const Hero = () => {
                 начнем
             </h1>
 
-            <div className="absolute left-0 top-0 z-40 size-full">
+            <div className="absolute left-0 top-12 z-40 size-full">
                 <div className="mt-24 px-5 sm:px-10">
                     <h1 className="font-title hero-heading text-white-100">
                         Узрите
