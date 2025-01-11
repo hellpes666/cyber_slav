@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  width: 100dvw;
+  overflow-x: hidden;
+  background-color: #0f0f0f;
+  color: #fafafa;
+  font-family: "default-regular", sans-serif;
+}
+
+@layer base {
+  @font-face {
+    font-family: "title";
+    src: url("/fonts/russianlandcyrillic.ttf") format("truetype"); 
+  }
+
+  @font-face {
+    font-family: "text-unique"; 
+    src: url("/fonts/ofont.ru_Vezitsa.ttf") format("truetype"); 
+  }
+
+  @font-face {
+    font-family: "default-light";
+    src: url("/fonts/IBMPlexSerif-Light.ttf") format("truetype"); 
+  }
+
+  @font-face {
+    font-family: "default-regular";
+    src: url("/fonts/IBMPlexSerif-Regular.ttf") format("truetype"); 
+  }
+
+  @font-face {
+    font-family: "default-medium";
+    src: url("/fonts/IBMPlexSerif-Medium.ttf") format("truetype"); 
+  }
+
+  @font-face {
+    font-family: "default-bold-italic";
+    src: url("/fonts/IBMPlexSerif-BoldItalic.ttf") format("truetype"); 
+  }
+}
+
+
+@layer utilities {
+  .nav-hover-btn {
+    @apply relative ms-10 font-general text-xs uppercase text-blue-50 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:rounded-full after:w-full after:origin-bottom-right after:scale-x-0 after:bg-blue-75 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer;
+  }
+
+  .absolute-center {
+    @apply absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%];
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .mask-clip-path {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
