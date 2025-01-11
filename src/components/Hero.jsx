@@ -43,21 +43,21 @@ const Hero = () => {
                     className="object-fit object-cover size-full"
                 />
 
-                <h1 className="font-title hero-heading absolute bottom-5 right-5 z-40 text-white-100">
+                <h1 className="font-title hero-heading absolute bottom-5 right-5 z-40 text-white-100 select-none">
                     начнём
                 </h1>
             </div>
-            <h1 className="font-title hero-heading absolute bottom-5 right-5 text-red-100">
+            <h1 className="font-title hero-heading absolute bottom-5 right-5 text-red-100 select-none">
                 начнём
             </h1>
 
             <div className="absolute left-0 top-12 z-40 size-full">
                 <div className="mt-24 px-5 sm:px-10">
-                    <h1 className="font-title hero-heading text-white-100">
+                    <h1 className="font-title hero-heading text-white-100 ">
                         Узрите
                     </h1>
 
-                    <p className="mt-5 mb-5 max-w-64 font-text-unique text-white-100 text-xl">
+                    <p className="mt-5 mb-5 max-w-64 font-text-unique text-white-100 text-xl select-none">
                         Новую и по истине красивую картину
                     </p>
 

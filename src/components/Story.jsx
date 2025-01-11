@@ -57,13 +57,13 @@ const Story = () => {
                 <div className="px-5 py-16 text-center">
                     <p
                         id="animated-text-1"
-                        className="font-text-unique text-2xl text-blue-50 tracking-wide opacity-0"
+                        className="font-text-unique text-2xl text-blue-50 tracking-wide opacity-0 select-none"
                     >
                         Откройте для себя новую историю уникального мира
                     </p>
                     <p
                         id="animated-text-2"
-                        className="text-center font-default-regular text-lg text-blue-50 opacity-0 max-w-2xl"
+                        className="text-center font-default-regular text-lg text-blue-50 opacity-0 max-w-2xl select-none"
                     >
                         В Древней Руси, где есть современные технологии — от
                         кибернетических имплантатов и плазменного оружия до
