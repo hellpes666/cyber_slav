@@ -3,7 +3,6 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { Button } from "../components";
 import { TiLocationArrow } from "react-icons/ti";
-import { useEffect, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,7 +28,7 @@ const Hero = () => {
 
     return (
         <section className="relative h-dvh w-screen overflow-hidden" id="hero">
-            {/* Make maybe check loading data */}
+            {/* Make check loading data maybe*/}
             {/* {imageLoaded && (
                 <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-[#0f0f0f]">
                     <img src="/img/logo-bg-tablet.png" alt="" className="" />

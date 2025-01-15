@@ -44,8 +44,12 @@ body {
 
 
 @layer utilities {
+  .standart-margin-x{
+    @apply mx-5 sm:mx-10
+  }
+
   .border-hsla {
-      @apply border border-white/20;
+      @apply border border-white-100/20;
     }
   .nav-hover-btn {
       @apply relative ms-10 font-text-unique text-xs tracking-wider uppercase text-white-100 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:rounded-full after:w-full after:origin-bottom-right after:scale-x-0 after:bg-white-100 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white-100 cursor-pointer select-none ;
@@ -71,11 +75,24 @@ body {
     @apply uppercase tracking-wide font-title font-black text-2xl sm:right-10 sm:text-3xl md:text-4xl lg:text-[5rem] select-none;
   }
 
-    .about-image {
-      @apply absolute left-1/2 top-0 z-20 h-[60vh] w-96 origin-center -translate-x-1/2 overflow-hidden rounded-3xl md:w-[30vw];
-    }
+  .about-image {
+    @apply absolute left-1/2 top-0 z-20 h-[60vh] w-96 origin-center -translate-x-1/2 overflow-hidden rounded-3xl md:w-[30vw];
+  }
 
+  .bento-tilt_1 {
+    @apply relative border-hsla col-span-2 overflow-hidden rounded-md transition-transform duration-300 ease-out;
+  }
 
+  .bento-tilt_2 {
+    @apply relative col-span-1 row-span-1 overflow-hidden rounded-md transition-transform duration-300 ease-out;
+  }
+
+  .bento-title {
+    @apply uppercase md:text-6xl text-4xl font-black font-title;
+  }
+  .animated-title {
+     @apply flex flex-col gap-1 text-7xl uppercase leading-[.8] text-white-100 sm:px-32 md:text-[6rem];
+   }
 }
 .indicator-line {
   @apply h-1 w-px rounded-full bg-white-100 transition-all duration-200 ease-in-out;
