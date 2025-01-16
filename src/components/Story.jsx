@@ -30,7 +30,26 @@ const Story = () => {
         <div id="about" className="min-h-screen w-screen">
             <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
                 <div className="px-5 py-16 text-center">
-                    <AnimatedTitle containerClass="mt-5 !text-black text-center" />
+                    <AnimatedTitle
+                        containerClass="mt-5 !text-black text-center"
+                        title={
+                            <>
+                                Откройте для себя новую историю <br />{" "}
+                                уникального мира
+                            </>
+                        }
+                        subtitle={
+                            <>
+                                В Древней Руси, где есть современные технологии
+                                — от кибернетических имплантатов и плазменного
+                                оружия до экзоскелетов и гигантских роботов —
+                                богатырь-полукровка по имени Киберслав пытается
+                                распутать жестокое преступление, чтобы узнать,
+                                кому помешала княжеская семья — озлобленному
+                                люду или нечисти, заполонившей местные леса.
+                            </>
+                        }
+                    />
                 </div>
             </div>
             <div className="h-dvh w-screen" id="clip">

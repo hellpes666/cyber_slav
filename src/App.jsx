@@ -1,4 +1,4 @@
-import { Header, Hero, Story, UniqueProjectCards } from "./components";
+import { Header, Hero, Story, UniqueProjectCards, Map } from "./components";
 export default function App() {
     return (
         <div>
@@ -6,6 +6,7 @@ export default function App() {
             <Hero />
             <Story />
             <UniqueProjectCards />
+            <Map />
             {/* <div className="h-[10000px]"></div> */}
         </div>
     );

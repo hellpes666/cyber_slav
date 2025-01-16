@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AnimatedTitle = ({ containerClass }) => {
+const AnimatedTitle = ({ containerClass, title, subtitle }) => {
     const containerRef = useRef(null);
 
     useEffect(() => {
@@ -41,18 +41,13 @@ const AnimatedTitle = ({ containerClass }) => {
                     id="animated-text-1"
                     className="animated-word font-text-unique text-4xl text-red-100 tracking-wide opacity-0 select-none"
                 >
-                    Откройте для себя новую историю <br /> уникального мира
+                    {title}
                 </p>
                 <p
                     id="animated-text-2"
-                    className="animated-word mt-5 mx-auto text-balance font-default-regular text-xl text-blue-50 opacity-0 max-w-2xl select-none"
+                    className="animated-word mt-5 mx-auto text-balance font-text-unique lowercase tracking-wider text-xl text-gray-200 opacity-0 max-w-2xl select-none"
                 >
-                    В Древней Руси, где есть современные технологии — от
-                    кибернетических имплантатов и плазменного оружия до
-                    экзоскелетов и гигантских роботов — богатырь-полукровка по
-                    имени Киберслав пытается распутать жестокое преступление,
-                    чтобы узнать, кому помешала княжеская семья — озлобленному
-                    люду или нечисти, заполонившей местные леса.
+                    {subtitle}
                 </p>
             </div>
         </div>
