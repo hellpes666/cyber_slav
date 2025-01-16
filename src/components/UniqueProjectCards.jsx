@@ -5,7 +5,7 @@ const MouseTrackerContainer = ({ className = "", children }) => {
     const [transformStyle, setTransformStyle] = useState("");
     const itemRef = useRef();
 
-    const handleOnMouseMove = (e) => {
+    const handleMouseMove = (e) => {
         if (!itemRef.current) return;
 
         const { left, top, width, height } =
@@ -14,24 +14,24 @@ const MouseTrackerContainer = ({ className = "", children }) => {
         const relativeX = (event.clientX - left) / width;
         const relativeY = (event.clientY - top) / height;
 
-        const degreeX = (relativeX - 0.5) * 25;
-        const degreeY = (relativeY - 0.5) * -25;
+        const tiltX = (relativeY - 0.5) * 25;
+        const tiltY = (relativeX - 0.5) * -25;
 
-        const newTransform = `perspective(700px) rotateX(${degreeX}deg) rotateY(${degreeY}deg) scale3d(0.90, 0.90, 0.90)`;
+        const newTransform = `perspective(600px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(0.90, 0.90, 0.90)`;
 
         setTransformStyle(newTransform);
     };
 
-    const handleOnMouseLeave = () => {
+    const handleMouseLeave = () => {
         setTransformStyle("");
     };
 
     return (
         <div
-            className={`${className}`}
+            className={className}
             ref={itemRef}
-            onMouseMove={handleOnMouseMove}
-            onMouseLeave={handleOnMouseLeave}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
             style={{ transform: transformStyle }}
         >
             {children}
