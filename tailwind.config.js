@@ -13,6 +13,7 @@ export default {
         'default-regular': ['default-regular', 'sans-serif'],
         'default-medium': ['default-medium', 'sans-serif'],
         'default-bold-italic': ['default-bold-italic', 'sans-serif'],
+        special: 'special'
       },
 
       colors: {
@@ -23,7 +24,11 @@ export default {
         white: {
           100: "#fafafa"
         }
-      }
+      },
+      animation: {
+        bounce: 'bounce 1s infinite',
+        fade: 'fade 0.5s ease-in-out',
+      },
     },
   },
   plugins: [],

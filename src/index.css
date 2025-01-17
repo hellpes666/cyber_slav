@@ -16,6 +16,10 @@ body {
     font-family: "title";
     src: url("/fonts/russianlandcyrillic.ttf") format("truetype"); 
   }
+  @font-face {
+    font-family: "special";
+    src: url("/fonts/RASKHAL.ttf") format("truetype");
+  }
 
   @font-face {
     font-family: "text-unique"; 

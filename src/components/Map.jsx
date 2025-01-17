@@ -1,12 +1,17 @@
 import { useRef } from "react";
 import AnimatedTitle from "./AnimatedTitle";
-
-const MapCard = ({ children, className, avaible, ref }) => {
+const MapCard = ({ children, className, avaible, ref, id }) => {
     return (
         <div
-            className={`rounded-lg bg-zinc-800 size-24 p-8 flex items-center justify-center ${!avaible ? "blur-[2px]" : ""}`}
+            className={`rounded-lg bg-zinc-800 size-24 p-8 flex items-center justify-center relative transition-all duration-300 ${!avaible ? "blur-[2px]  hover:rotate-[5deg] cursor-not-allowed" : "hover:translate-y-1 cursor-pointer"}`}
             ref={ref}
+            id={id}
         >
+            {avaible && (
+                <div className="absolute font-special text-xl text-nowrap bottom-24 text-red-100 tracking-widest">
+                    WATCH NOW
+                </div>
+            )}
             <div className={`flex items-center justify-center`}>
                 <div className={`z-10 rounded-full ${className}`}>
                     {children}
@@ -92,10 +97,15 @@ const Map = () => {
                         }
                     />
                 </div>
-                <div className="flex justify-between">
+
+                <div className="flex gap-x-16 gap-y-8 max-w-xl flex-wrap mx-auto">
                     {MapCards &&
                         MapCards.map((item, index) => (
-                            <MapCard key={index} {...item} />
+                            <MapCard
+                                key={index}
+                                {...item}
+                                id={"end-" + index}
+                            />
                         ))}
                 </div>
             </div>
